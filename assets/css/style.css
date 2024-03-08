@@ -1,18 +1,20 @@
+:root {
+    --gap:15px;
+}
+
+html { scroll-behavior: smooth; }
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-.bdr {border: 1px solid red;}
+body { background-color: #d9dcd6; }
 
-body {
-    background-color: #d9dcd6;
-}
-
-/* changed all header classes to header tag selector */
 header {
     display:flex;
+    justify-content: space-between;
     align-items: center;
     padding: 15px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -23,34 +25,40 @@ header {
 header h1 {
     display: inline-block;
     font-size: 48px;
-    margin-right: auto;
+    margin-right: 30px;
 }
 
 header h1 .seo {
     color: #bebea8;
 }
 
-header nav {
-    text-align: right;
-    padding-left: 15px;
-    float: right;
+nav {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
 }
 
-header nav ul {
+nav ul {
+    display: flex;
+    gap: 10px;
     list-style-type: none;
 }
 
-header nav ul li {
-    display: inline-block;
-    margin-left: 25px;
+@media (max-width: 800px) {
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+nav ul li {
+    text-align: center;
+    margin: 10px 0;
     background-color:rgb(0,0,0,.1);
     padding: 5px 10px;
     border-radius: 5px;
     margin: 3px 0px;
     cursor: pointer;
 }
+
 li:hover{
     background-color:rgb(0,0,0,.3);
 }
@@ -64,11 +72,9 @@ p {
     font-size: 16px;
 }
 
-/* changed class of hero to an id */
 #hero {
     height: 700px;
     width: 100%;
-    margin-bottom: 25px;
     background-image: url("../images/digital-marketing-meeting.jpg");
     background-size: cover;
     background-position: center 15%;
@@ -84,124 +90,113 @@ p {
     margin-left: 25px;
 }
 
-.content {
-    width: 75%;
-    display: inline-block;
-    margin-left: 20px;
+.parent {
+    display: flex; 
+    width: -moz-fit-content;
+    width: fit-content; 
+    max-width: 1400px;
+    margin:auto;
+}
+    
+.child1 { flex: 1; }
+
+.child2 {
+    min-width: 200px; 
+    flex-grow: 0; 
 }
 
-.benefits {
-    margin-right: 20px;
+@media (max-width: 730px) { 
+    .parent { flex-direction: column; }
+    .child1, .child2 { width: 100%; }
+}
+
+@media (max-width: 1070px) { 
+    .sm-float-left {
+        float: left !important;
+        margin: 0 25px 5px 0;
+    }
+}
+
+@media (min-width: 731px){
+    .max-w {max-width: 300px;}
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    gap: var(--gap);
+    padding: var(--gap);
+    max-width: 100%;
+    background-color: #ffffff;
+}
+
+main h2 span {
+    white-space: nowrap;
+}
+
+.rounded {
+    border-radius: 8px;
+}
+
+#content-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    align-content: space-between;
+}
+
+#content-section > div {
+    padding: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+
+#content-section img { 
+    max-height: 200px; 
+    margin-bottom: 5px;
+}
+
+#content-section > div h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+#benefits {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 20px;
+    padding: var(--gap);
+    min-width: 220px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+    text-align: center;
+}
+
+#benefits > div {
+    max-width: 500px;
+    background-color: rgb(0,0,0,.1);
+    border-radius: 5px;
     padding: 20px;
-    clear: both;
-    float: right;
-    width: 20%;
-    height: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #2589bd;
 }
 
-.benefit-lead {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-brand {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-cost {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-lead h3 {
+.benefit-lead h3, .benefit-brand h3, .benefit-cost h3 {
     margin-bottom: 10px;
     text-align: center;
 }
 
-.benefit-brand h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-cost h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-lead img {
+.benefit-lead img, .benefit-brand img, .benefit-cost img {
     display: block;
     margin: 10px auto;
-    max-width: 150px;
+    max-width: 100px;
 }
 
-.benefit-brand img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.benefit-cost img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-/* change search-engine-optimization class to id */
-#search-engine-optimization {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-#online-reputation-management {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-#social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-#search-engine-optimization img {
-    max-height: 200px;
-}
-
-#online-reputation-management img {
-    max-height: 200px;
-}
-
-#social-media-marketing img {
-    max-height: 200px;
-}
-
-#search-engine-optimization h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-#online-reputation-management h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-#social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
+.line {
+    border: 1px solid #ffffff;
+    width: 40%;
 }
 
 .footer {
@@ -209,6 +204,7 @@ p {
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
+    background-color: rgba(0,0,0,.3);
 }
 
 .footer h2 {
