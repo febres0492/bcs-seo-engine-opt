@@ -150,10 +150,6 @@ main {
     align-content: space-between;
 }
 
-/* #content-section > div:not(:nth-child(1)) {
-    display: none;
-} */
-
 #content-section > div {
     padding: 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
