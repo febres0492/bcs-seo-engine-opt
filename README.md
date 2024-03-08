@@ -20,7 +20,8 @@ Here are some of the changes that I made.
 * **Added alt text to images**
 * **Added span inside h2 tags to prevent text from breaking at the wrong part**
 * **Changed div to footer tag and remove class of footer**
-* **Consolidated Css**
+* **Consolidated CSS selectors**
+* **Added some styling and responsiveness**
 
 
 
