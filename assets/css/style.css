@@ -155,7 +155,7 @@ main {
 } */
 
 #content-section > div {
-    padding: 50px;
+    padding: 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #0072bb;
     color: #ffffff;
@@ -174,7 +174,7 @@ main {
 
 /* benefits section */
 #benefits {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
