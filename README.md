@@ -20,6 +20,9 @@ Here are some of the changes that I made.
 * **Added alt text to images**
 * **Added span inside h2 tags to prevent text from breaking at the wrong part**
 * **Changed div to footer tag and remove class of footer**
+* **Consolidated Css**
+
+
 
 ## Link:
 **Application deployed at:** https://febres0492.github.io/bcs-seo-engine-opt/.
