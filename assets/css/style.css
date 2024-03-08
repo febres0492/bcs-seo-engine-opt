@@ -91,7 +91,6 @@ p {
 }
 
 .parent {
-    display: flex; 
     width: -moz-fit-content;
     width: fit-content; 
     max-width: 1400px;
@@ -124,6 +123,7 @@ p {
 main {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     gap: var(--gap);
     padding: var(--gap);
     max-width: 100%;
@@ -167,7 +167,7 @@ main h2 span {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    row-gap: 20px;
+    row-gap: 29px;
     padding: var(--gap);
     min-width: 220px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
