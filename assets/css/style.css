@@ -1,9 +1,8 @@
 :root {
-    --gap:15px;
+    --gap:20px;
 }
 
 html { 
-    background-color: #f3f3f3;
     scroll-behavior: smooth; 
 }
 
@@ -17,10 +16,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: start;
-    max-width: 1400px;
-    column-gap: var(--gap);
+    column-gap: 50px;
     margin:auto;
-    background-color: #ffffff; 
+    background-color: #d9dcd6; 
 }
 
 /* header */
@@ -79,9 +77,7 @@ nav ul {
 nav ul li {
     text-align: center;
     margin: 10px 0;
-    background-color:rgb(0,0,0,.1);
     padding: 5px 10px;
-    border-radius: 5px;
     margin: 3px 0px;
     cursor: pointer;
 }
@@ -165,12 +161,7 @@ main {
     justify-content: center;
     align-items: flex-start;
     gap: var(--gap);
-    max-width: 100%;
-    background-color: #ffffff;
-}
-
-.rounded {
-    border-radius: 8px;
+    margin-bottom: var(--gap);
 }
 
 /* content section */
@@ -182,7 +173,7 @@ main {
 }
 
 .content-section {
-    padding: 30px;
+    padding: 50px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #0072bb;
     color: #ffffff;
@@ -205,20 +196,18 @@ main {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    row-gap: 40px;
+    width: 100%;
+    row-gap: 70px;
     padding: var(--gap);
-    min-width: 220px;
+    min-width: 365px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
+    background-color: #2589bd;
     color: #ffffff;
     text-align: center;
 }
 
 .article-box {
-    max-width: 500px;
-    background-color: rgb(0,0,0,.1);
-    border-radius: 5px;
-    padding: 20px;
+    max-width: 600px;
 }
 
 .article-header {
@@ -234,7 +223,6 @@ main {
 
 /* footer */
 .footer {
-    margin-top: var(--gap);
     width: 100%;
     padding: 30px;
     clear: both;
