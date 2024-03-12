@@ -32,7 +32,7 @@ Here are some of the changes that I made.
 * **HTML** 
 * **CSS**
 
-## Installation and Usage (Optional)
+## Installation and Usage
  > **N/A**
 
 ## Author
