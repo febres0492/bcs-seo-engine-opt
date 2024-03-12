@@ -106,7 +106,7 @@ p {
     content: "";
     display: block;
     position: relative;
-    width: calc(100% + var(--gap)*2);
+    width: calc(100% + var(--gap)*2.1);
     left: calc( var(--gap) *-1.1);
     height: 100%;
     background-image: url("../images/digital-marketing-meeting.jpg");
