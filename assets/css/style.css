@@ -2,7 +2,10 @@
     --gap:15px;
 }
 
-html { scroll-behavior: smooth; }
+html { 
+    background-color: #f3f3f3;
+    scroll-behavior: smooth; 
+}
 
 * {
     box-sizing: border-box;
@@ -11,22 +14,40 @@ html { scroll-behavior: smooth; }
 }
 
 body { 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
     max-width: 1400px;
+    column-gap: var(--gap);
     margin:auto;
-    background-color: #d9dcd6; 
+    background-color: #ffffff; 
 }
 
 /* header */
 header {
     display:flex;
     justify-content: space-between;
+    width: 100%;
     align-items: center;
     flex-wrap: wrap;
-    padding: 15px;
+    padding: 15px 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #2a607c;
     color: #ffffff;
+    position: relative;
 }
+header > * {z-index:5;}
+header::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: calc(100% + var(--gap)*2);
+    height: 100%;
+    left: calc( var(--gap) *-1.1);
+    z-index: 0;
+    background-color: #2a607c;
+}
+
 
 header h1 {
     display: inline-block;
@@ -82,6 +103,16 @@ p {
 #hero {
     height: 700px;
     width: 100%;
+    position: relative;
+    margin-bottom: var(--gap);
+}
+#hero::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: calc(100% + var(--gap)*2);
+    left: calc( var(--gap) *-1.1);
+    height: 100%;
     background-image: url("../images/digital-marketing-meeting.jpg");
     background-size: cover;
     background-position: center 15%;
@@ -102,6 +133,7 @@ p {
     width: -moz-fit-content;
     width: fit-content; 
     margin:auto;
+    padding: 0 var(--gap);
 }
     
 .child1 { flex: 1; }
@@ -123,7 +155,7 @@ p {
     }
 }
 
-@media (min-width: 731px){
+@media (min-width: 845px){
     .max-w {max-width: 300px;}
 }
 
@@ -133,7 +165,6 @@ main {
     justify-content: center;
     align-items: flex-start;
     gap: var(--gap);
-    padding: var(--gap);
     max-width: 100%;
     background-color: #ffffff;
 }
@@ -143,27 +174,27 @@ main {
 }
 
 /* content section */
-#content-section {
+#content {
     display: flex;
     flex-wrap: wrap;
     gap: var(--gap);
     align-content: space-between;
 }
 
-#content-section > div {
+.content-section {
     padding: 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #0072bb;
     color: #ffffff;
 }
 
-#content-section img { 
+.content-img { 
     width: 100%;
     max-width: 300px; 
     margin-bottom: 5px;
 }
 
-#content-section > div h2 {
+.content-header {
     margin-bottom: 20px;
     font-size: 36px;
 }
@@ -174,7 +205,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    row-gap: 29px;
+    row-gap: 40px;
     padding: var(--gap);
     min-width: 220px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -183,38 +214,31 @@ main {
     text-align: center;
 }
 
-#benefits > div {
+.article-box {
     max-width: 500px;
     background-color: rgb(0,0,0,.1);
     border-radius: 5px;
     padding: 20px;
 }
 
-.benefit-lead h3, .benefit-brand h3, .benefit-cost h3 {
+.article-header {
     margin-bottom: 10px;
     text-align: center;
 }
 
-.benefit-lead img, .benefit-brand img, .benefit-cost img {
+.article-img {
     display: block;
     margin: 10px auto;
     max-width: 100px;
 }
 
-.line {
-    border: 1px solid #ffffff;
-    width: 40%;
-}
-
 /* footer */
 .footer {
+    margin-top: var(--gap);
+    width: 100%;
     padding: 30px;
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
-    background-color: rgba(0,0,0,.3);
-}
-
-.footer h2 {
-    font-size: 20px;
+    position: relative;
 }

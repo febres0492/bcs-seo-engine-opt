@@ -23,8 +23,8 @@ Here are some of the changes that I made.
 * **Added some styling**
 * **Added responsiveness styling**
 
-
-
+## Preview
+![The Horiseon webpage includes a navigation bar, a header image, and cards with text and images at the bottom of the page.](./assets/images/Horiseon-preview.png)
 ## Link:
 **Application deployed at:** https://febres0492.github.io/bcs-seo-engine-opt/.
 
