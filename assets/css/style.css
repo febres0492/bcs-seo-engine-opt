@@ -21,7 +21,7 @@ body {
     background-color: #d9dcd6; 
 }
 
-/* header */
+/* header ------------------------------------------------------------- */
 header {
     display:flex;
     justify-content: space-between;
@@ -57,6 +57,7 @@ header h1 .seo {
     color: #bebea8;
 }
 
+/* nav ------------------------------------------------------------- */
 nav {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
@@ -95,7 +96,7 @@ p {
     font-size: 16px;
 }
 
-/* Hero section */
+/* Hero section ------------------------------------------------------------- */
 #hero {
     height: 700px;
     width: 100%;
@@ -124,7 +125,7 @@ p {
     margin-left: 25px;
 }
 
-/* media query responsive code */
+/* media query responsive code -------------------------------------------------- */
 .parent {
     width: -moz-fit-content;
     width: fit-content; 
@@ -155,7 +156,7 @@ p {
     .max-w {max-width: 300px;}
 }
 
-/* main container */
+/* main container ------------------------------------------------------------- */
 main {
     display: flex;
     justify-content: center;
@@ -164,7 +165,7 @@ main {
     margin-bottom: var(--gap);
 }
 
-/* content section */
+/* content section ------------------------------------------------------------- */
 #content {
     display: flex;
     flex-wrap: wrap;
@@ -190,7 +191,7 @@ main {
     font-size: 36px;
 }
 
-/* benefits section */
+/* benefits section ------------------------------------------------------------- */
 #benefits {
     display: flex;
     flex-direction: column;
@@ -221,8 +222,8 @@ main {
     max-width: 100px;
 }
 
-/* footer */
-.footer {
+/* footer ------------------------------------------------------------- */
+footer {
     width: 100%;
     padding: 30px;
     clear: both;
